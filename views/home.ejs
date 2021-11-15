@@ -1,6 +1,12 @@
 <%- include('partials/header') -%>
 
-<h1>home</h1>
-<p> <%= content %> </p>
+<h1>Home</h1>
+<p><%= content %></p>
+<% posts.forEach(element => { %>
+    <div>
+        <h2><%= element.title %></h2>
+        <p><%= element.body %></p>
+    </div>
+<% }); %>
 
 <%- include('partials/footer.ejs') -%>
